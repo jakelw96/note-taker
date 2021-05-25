@@ -9,4 +9,9 @@ router.get('/notes', (req, res) => {
   res.json(noteData);
 });
 
+// Receives new note and adds to JSON file then returns
+router.post('/notes', (req, res) => {
+    
+}
+
 module.exports = router;
