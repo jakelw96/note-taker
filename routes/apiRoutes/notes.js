@@ -1,5 +1,7 @@
 const fs = require('fs');
-const createNewNote = require('../../lib');
+// const createNewNote = require('../../lib');
+// const deleteNote = require('../../lib');
+const { createNewNote, deleteNote } = require('../../lib');
 const generateUniqueId = require('generate-unique-id');
 const router = require('express').Router();
 
@@ -21,5 +23,14 @@ router.post('/notes', (req, res) => {
     res.json(newNote)
 });
 
+// Deletes note
+router.delete('/notes/:id', (req, res) => {
+    let id = req.params.id;
+    let currNotes = fs.readFileSync('./db/db.json')
+
+    let updatedNotes = deleteNote(req.body, id, currNotes);
+
+    res.json(updatedNotes)
+});
 
 module.exports = router;
