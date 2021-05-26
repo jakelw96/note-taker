@@ -20,6 +20,7 @@ A git clone of the project data can be used. Then all that is needed is the comm
 ## Usage
 
 Once the code is cloned, you cd to the project directory on the command line. Once there, you type in "npm start" to initiate the server. You will then visit the localhost:3001/ to begin using the application.
+Alternatively, you can visit [Deployed-Application](https://note-taker-jakelw96.herokuapp.com/) to use the application.
 
 ## License
 
